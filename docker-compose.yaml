@@ -12,12 +12,12 @@ services:
       - 50000:50000
     container_name: jenkins
     volumes:
+      - ./config.xml:/var/jenkins_home/jobs/Aurora_Labs_Devops_exam_1/config.xml
       - ./jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       DOCKER_SOCKET: /var/run/docker.sock
       JAVA_OPTS: -Djenkins.install.runSetupWizard=false
-    privileged: true
     networks:
       - jenkins_aurora 
     restart: unless-stopped
