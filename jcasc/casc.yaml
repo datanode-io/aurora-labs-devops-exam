@@ -1,0 +1,10 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          id: "Jenkins-GitHub-credentials"
+          username: "alexgohberg"
+          password: "${GITHUB_ACCESS_TOKEN}"
+          description: "GitHUb credentials"
+          scope: GLOBAL
